@@ -15,6 +15,6 @@
         }
 
     }
-    $obj = new fnc();
-    print $obj -> user_age("Alex",2004);
+    /*$obj = new fnc();
+    print $obj -> user_age("Alex",2004);*/
 ?>    
