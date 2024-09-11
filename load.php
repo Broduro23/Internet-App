@@ -1,7 +1,7 @@
 <?php
 function classautoload($classname){
 $directories =["content","Layout","Menus"];
-foreach($dirctories as $dir){
+foreach($directories as $dir){
     $filename = dirname(__FILE__).DIRECTORY_SEPARATOR .$dir.DIRECTORY_SEPARATOR.$classname.".php";
     if(file_exists($filename)AND is_readable($filename)){
         require_once $filename;
@@ -19,6 +19,7 @@ spl_autoload_register('classautoload');
     $ObjMenus = new menus();
     $ObjHeadings = new headings();
     $ObjLayouts = new layouts();
+    $ObjCont = new Contents();
     /*$arr = ["black", "white","green","red"];
     foreach($arr as $color){
         print $color."<br>";

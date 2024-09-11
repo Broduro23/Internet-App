@@ -13,7 +13,11 @@
         //print $obj -> user_age("Alex",2004);
         $ObjLayout -> heading();
         $ObjMenus ->main_menu();
-        $ObjMenus -> main_right_menu();
+        $ObjCont ->main_content();
+        $ObjCont ->side_bar();
+        $ObjCont -> about_content();
+        
+        $ObjHeadings -> main_banner();
         $ObjLayouts ->footer();
         ?>
     
