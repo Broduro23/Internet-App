@@ -13,8 +13,13 @@ spl_autoload_register('classautoload');
     require_once "Menus/menus.php";
     require_once "Layout/layouts.php";
     require_once "content/headings.php";*/
+    require"includes/constants.php";
+    require"includes/dbConnection.php";
+    $conn = new dbConnection(DBTYPE,HOSTNAME,DBPORT,HOSTUSER,HOSTPASS,DBNAME);
+    
 
     //create instances of all classes
+
     $ObjLayout = new layouts();
     $ObjMenus = new menus();
     $ObjHeadings = new headings();
