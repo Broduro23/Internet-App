@@ -25,6 +25,7 @@ spl_autoload_register('classautoload');
     $ObjHeadings = new headings();
     $ObjLayouts = new layouts();
     $ObjCont = new Contents();
+    $Objsign = new signup();
     /*$arr = ["black", "white","green","red"];
     foreach($arr as $color){
         print $color."<br>";
