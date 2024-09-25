@@ -1,6 +1,6 @@
 <?php
 function classautoload($classname){
-$directories =["content","Layout","Menus"];
+$directories =["content","Layout","Menus","processes","forms"];
 foreach($directories as $dir){
     $filename = dirname(__FILE__).DIRECTORY_SEPARATOR .$dir.DIRECTORY_SEPARATOR.$classname.".php";
     if(file_exists($filename)AND is_readable($filename)){
@@ -26,6 +26,10 @@ spl_autoload_register('classautoload');
     $ObjLayouts = new layouts();
     $ObjCont = new Contents();
     $Objsign = new signup();
+    $ObjAuth = new auth();
+    $ObjForm = new user_forms();
+    $ObjAuth->signup($conn);
+
     /*$arr = ["black", "white","green","red"];
     foreach($arr as $color){
         print $color."<br>";
